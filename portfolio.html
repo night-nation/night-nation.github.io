@@ -42,11 +42,6 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Pagrindinis</a></li>
@@ -76,147 +71,102 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
+        <h2>Atlikti darbai</h2>
+        <p>MATLAB laboratorinių darbų grafikai: vienmatės ir dviejų kintamųjų funkcijos, skirtingi vizualizavimo būdai.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-strategy">Strategy</li>
-            <li data-filter=".filter-finance">Finance</li>
-            <li data-filter=".filter-operations">Operations</li>
-            <li data-filter=".filter-technology">Technology</li>
+            <li data-filter="*" class="filter-active">Visi</li>
+            <li data-filter=".filter-2d">2D grafikai</li>
+            <li data-filter=".filter-3d">3D paviršiai</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-strategy">
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-2d">
               <div class="portfolio-card">
                 <div class="portfolio-img">
-                  <img src="assets/img/portfolio/portfolio-1.webp" alt="Portfolio Item" class="img-fluid">
+                  <img src="assets/img/portfolio/ld-1.png" alt="Funkcijos f(x) = sin(x) + cos²(x) grafikas" width="1382" height="915" class="img-fluid" style="height:auto;">
                   <div class="portfolio-overlay">
-                    <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
+                    <a href="assets/img/portfolio/ld-1.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
                     <a href="#" class="portfolio-details-link"><i class="bi bi-link"></i></a>
                   </div>
                 </div>
                 <div class="portfolio-info">
-                  <h4>Business Growth Strategy</h4>
-                  <p>Strategic Planning</p>
+                  <h4>Funkcija f(x) = sin(x) + cos²(x)</h4>
+                  <p>Funkcijos reikšmių skaičiavimas intervale x ∈ [0; 6] žingsniu 0,5. Taškai pažymėti žymekliais ir sujungti linija, matomi maksimumai (~1,25) ir minimumas (~−0,93).</p>
                   <div class="portfolio-tags">
-                    <span>Strategy</span>
-                    <span>Consulting</span>
+                    <span>MATLAB</span>
+                    <span>plot</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-finance">
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-2d">
               <div class="portfolio-card">
                 <div class="portfolio-img">
-                  <img src="assets/img/portfolio/portfolio-2.webp" alt="Portfolio Item" class="img-fluid">
+                  <img src="assets/img/portfolio/ld-2.png" alt="Funkcijos y(x) = x³ + sin(x) grafikai: linijinis ir stulpelinis" width="1376" height="915" class="img-fluid" style="height:auto;">
                   <div class="portfolio-overlay">
-                    <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
+                    <a href="assets/img/portfolio/ld-2.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
                     <a href="#" class="portfolio-details-link"><i class="bi bi-link"></i></a>
                   </div>
                 </div>
                 <div class="portfolio-info">
-                  <h4>Financial Restructuring</h4>
-                  <p>Financial Advisory</p>
+                  <h4>Funkcija y(x) = x³ + sin(x)</h4>
+                  <p>Tos pačios funkcijos vaizdavimas dviem būdais viename lange (subplot): kairėje specialus linijinis grafikas, dešinėje stulpelinė diagrama (bar), rodanti kubinį reikšmių augimą.</p>
                   <div class="portfolio-tags">
-                    <span>Finance</span>
-                    <span>Investment</span>
+                    <span>MATLAB</span>
+                    <span>subplot</span>
+                    <span>bar</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-operations">
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-3d">
               <div class="portfolio-card">
                 <div class="portfolio-img">
-                  <img src="assets/img/portfolio/portfolio-3.webp" alt="Portfolio Item" class="img-fluid">
+                  <img src="assets/img/portfolio/ld-3.png" alt="3D paviršius f(x,y) = 1 − 2x² − 3y²" width="1429" height="888" class="img-fluid" style="height:auto;">
                   <div class="portfolio-overlay">
-                    <a href="assets/img/portfolio/portfolio-3.webp" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
+                    <a href="assets/img/portfolio/ld-3.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
                     <a href="#" class="portfolio-details-link"><i class="bi bi-link"></i></a>
                   </div>
                 </div>
                 <div class="portfolio-info">
-                  <h4>Supply Chain Optimization</h4>
-                  <p>Operations Management</p>
+                  <h4>Paviršius f(x,y) = 1 − 2x² − 3y²</h4>
+                  <p>Dviejų kintamųjų funkcijos 3D paviršius srityje x, y ∈ [−1; 1]. Elipsinis paraboloidas su maksimumu taške (0; 0), spalvų žemėlapis atspindi aukštį.</p>
                   <div class="portfolio-tags">
-                    <span>Operations</span>
-                    <span>Logistics</span>
+                    <span>MATLAB</span>
+                    <span>surf</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-technology">
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-3d">
               <div class="portfolio-card">
                 <div class="portfolio-img">
-                  <img src="assets/img/portfolio/portfolio-4.webp" alt="Portfolio Item" class="img-fluid">
+                  <img src="assets/img/portfolio/ld-4.png" alt="3D paviršius f(x,y) = sin(|x+y|/20)·e^(−|x+y|)" width="1451" height="897" class="img-fluid" style="height:auto;">
                   <div class="portfolio-overlay">
-                    <a href="assets/img/portfolio/portfolio-4.webp" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
+                    <a href="assets/img/portfolio/ld-4.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
                     <a href="#" class="portfolio-details-link"><i class="bi bi-link"></i></a>
                   </div>
                 </div>
                 <div class="portfolio-info">
-                  <h4>Digital Transformation</h4>
-                  <p>Technology Consulting</p>
+                  <h4>Paviršius f(x,y) = sin(|x+y|/20)·e^(−|x+y|)</h4>
+                  <p>Funkcija, priklausanti nuo sumos x+y, srityje x, y ∈ [−2; 2]. Paviršius simetriškas tiesės x+y = 0 atžvilgiu, o reikšmės siekia apie 0,02.</p>
                   <div class="portfolio-tags">
-                    <span>Technology</span>
-                    <span>Innovation</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-strategy">
-              <div class="portfolio-card">
-                <div class="portfolio-img">
-                  <img src="assets/img/portfolio/portfolio-5.webp" alt="Portfolio Item" class="img-fluid">
-                  <div class="portfolio-overlay">
-                    <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
-                    <a href="#" class="portfolio-details-link"><i class="bi bi-link"></i></a>
-                  </div>
-                </div>
-                <div class="portfolio-info">
-                  <h4>Market Expansion</h4>
-                  <p>Strategic Planning</p>
-                  <div class="portfolio-tags">
-                    <span>Strategy</span>
-                    <span>Growth</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-finance">
-              <div class="portfolio-card">
-                <div class="portfolio-img">
-                  <img src="assets/img/portfolio/portfolio-6.webp" alt="Portfolio Item" class="img-fluid">
-                  <div class="portfolio-overlay">
-                    <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
-                    <a href="#" class="portfolio-details-link"><i class="bi bi-link"></i></a>
-                  </div>
-                </div>
-                <div class="portfolio-info">
-                  <h4>Investment Strategy</h4>
-                  <p>Financial Advisory</p>
-                  <div class="portfolio-tags">
-                    <span>Finance</span>
-                    <span>Investment</span>
+                    <span>MATLAB</span>
+                    <span>surf</span>
                   </div>
                 </div>
               </div>
             </div>
           </div><!-- End Portfolio Items Container -->
 
-        </div>
-
-        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
-          <a href="#portfolio" class="btn btn-primary">View All Case Studies</a>
         </div>
 
       </div>

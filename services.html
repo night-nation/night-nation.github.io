@@ -28,6 +28,29 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* Paslaugų lentelė ir sąrašai */
+    .services-extra table {
+      --bs-table-color: inherit;
+      --bs-table-bg: transparent;
+      --bs-table-border-color: rgba(128, 128, 128, 0.4);
+      color: inherit;
+    }
+    .services-extra thead th {
+      background: rgba(128, 128, 128, 0.2);
+    }
+    .services-extra h3 {
+      margin-bottom: 1rem;
+    }
+    .services-extra ul,
+    .services-extra ol {
+      padding-left: 1.5rem;
+    }
+    .services-extra li {
+      margin-bottom: 0.4rem;
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: FolioOne
   * Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
@@ -41,11 +64,6 @@
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
-
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -76,7 +94,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
+        <h2>Paslaugos</h2>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -86,13 +104,13 @@
           <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
             <div class="service-item">
               <div class="service-icon">
-                <i class="bi bi-code-slash"></i>
+                <i class="bi bi-cpu"></i>
               </div>
               <div class="service-content">
-                <h3>Custom Web Development</h3>
-                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="" class="service-link">
-                  <span>Learn More</span>
+                <h3>Įterptinių sistemų programavimas</h3>
+                <p>ESP32 / ESP8266 mikrovaldiklių programinės įrangos kūrimas: jutiklių nuskaitymas, valdymo logika, belaidis ryšys ir pritaikyti įrenginių prototipai.</p>
+                <a href="#paslaugu-kainos" class="service-link">
+                  <span>Plačiau</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -102,13 +120,13 @@
           <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
             <div class="service-item">
               <div class="service-icon">
-                <i class="bi bi-phone-fill"></i>
+                <i class="bi bi-tools"></i>
               </div>
               <div class="service-content">
-                <h3>Mobile App Solutions</h3>
-                <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo, lacinia eget consectetur sed. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada.</p>
-                <a href="" class="service-link">
-                  <span>Learn More</span>
+                <h3>Elektronikos diagnostika ir remontas</h3>
+                <p>Elektroninių įrenginių ir nešiojamųjų kompiuterių aparatinių gedimų paieška, matavimai ir remontas.</p>
+                <a href="#paslaugu-kainos" class="service-link">
+                  <span>Plačiau</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -118,13 +136,13 @@
           <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
             <div class="service-item">
               <div class="service-icon">
-                <i class="bi bi-palette2"></i>
+                <i class="bi bi-hdd-network"></i>
               </div>
               <div class="service-content">
-                <h3>UI/UX Design</h3>
-                <p>Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
-                <a href="" class="service-link">
-                  <span>Learn More</span>
+                <h3>Namų tinklai ir išmanieji namai</h3>
+                <p>Home Assistant, Proxmox ir namų tinklo (VPN, DNS) diegimas bei konfigūravimas.</p>
+                <a href="#paslaugu-kainos" class="service-link">
+                  <span>Plačiau</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -134,13 +152,13 @@
           <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
             <div class="service-item">
               <div class="service-icon">
-                <i class="bi bi-bar-chart-line"></i>
+                <i class="bi bi-search"></i>
               </div>
               <div class="service-content">
-                <h3>Digital Marketing</h3>
-                <p>Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit.</p>
-                <a href="" class="service-link">
-                  <span>Learn More</span>
+                <h3>Atvirkštinė inžinerija</h3>
+                <p>Ryšio protokolų (CAN, BLE) ir aparatinės įrangos analizė, duomenų dekodavimas ir dokumentavimas.</p>
+                <a href="#paslaugu-kainos" class="service-link">
+                  <span>Plačiau</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -148,6 +166,105 @@
           </div><!-- End Service Item -->
 
         </div>
+
+        <!-- Papildomas turinys: lentelė ir sąrašai -->
+        <div class="services-extra mt-5">
+
+
+          <div id="paslaugu-kainos" class="mb-5" data-aos="fade-up">
+            <h3>Paslaugų kainynas</h3>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col">Paslauga</th>
+                    <th scope="col">Aprašymas</th>
+                    <th scope="col">Kaina</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Įterptinių sistemų programavimas</td>
+                    <td>ESP32 / ESP8266 valdiklių programinės įrangos kūrimas pagal poreikį</td>
+                    <td>150 Eur</td>
+                  </tr>
+                  <tr>
+                    <td>Elektronikos diagnostika ir remontas</td>
+                    <td>Elektroninių įrenginių gedimų paieška ir taisymas</td>
+                    <td>40 Eur</td>
+                  </tr>
+                  <tr>
+                    <td>Išmaniųjų namų diegimas</td>
+                    <td>Home Assistant ir namų tinklo konfigūravimas</td>
+                    <td>80 Eur</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="row g-5">
+
+            <div class="col-md-6" data-aos="fade-up">
+              <h3>Naudojamos technologijos ir įrankiai</h3>
+              <ul>
+                <li>Mikrovaldikliai ESP32 ir ESP8266</li>
+                <li>Programavimo kalbos ir aplinkos
+                  <ul>
+                    <li>C / C++ (Arduino IDE, PlatformIO)</li>
+                    <li>MicroPython</li>
+                  </ul>
+                </li>
+                <li>Multimetras ir osciloskopas matavimams</li>
+                <li>Home Assistant ir Proxmox</li>
+              </ul>
+            </div>
+
+  
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <h3>Įterptinių sistemų programavimo etapai</h3>
+              <ol>
+                <li>Reikalavimų aptarimas ir komponentų parinkimas</li>
+                <li>Prototipo surinkimas ir schemos patikra</li>
+                <li>Programinės įrangos kūrimas</li>
+                <li>Testavimas ir derinimas</li>
+                <li>Įrenginio perdavimas ir dokumentacija</li>
+              </ol>
+            </div>
+          </div>
+
+        </div><!-- End services-extra -->
+
+       
+        <div class="services-extra mt-5">
+          <h3 data-aos="fade-up">Medijos įrašai</h3>
+
+          <div class="row g-5">
+    
+            <div class="col-md-6" data-aos="fade-up">
+              <h4>Vaizdo įrašas</h4>
+              <video class="w-100" controls preload="metadata">
+                <source src="assets/media/typing.mp4" type="video/mp4">
+              </video>
+            </div>
+
+       
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <h4>YouTube įrašas</h4>
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/BoUVIhtqjAw" title="YouTube vaizdo įrašas" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+      
+          <div class="mt-5" data-aos="fade-up">
+            <h4>Garso įrašas</h4>
+            <audio controls preload="metadata" class="w-100">
+              <source src="assets/media/clock-ticking.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div><!-- End media -->
 
       </div>
 
