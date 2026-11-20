@@ -10,7 +10,8 @@
   --heading-color: #f8fafc;
   --accent-color: #2dd4bf;
   --surface-color: #1e293b;
-  --contrast-color: #0f172a;
+  --contrast-color: #ffffff;   
+  --on-accent: #0f172a;        
 
   --nav-color: #cbd5e1;
   --nav-hover-color: #2dd4bf;
@@ -30,7 +31,8 @@
   --default-color: #cbd5e1;
   --heading-color: #f8fafc;
   --surface-color: #1e293b;
-  --contrast-color: #0f172a;
+  --contrast-color: #ffffff;
+  --on-accent: #0f172a;
 }
 
 body {
@@ -116,14 +118,14 @@ button:focus-visible {
 .php-email-form button[type="submit"] {
   background-color: var(--accent-color);
   border: 2px solid var(--accent-color);
-  color: var(--contrast-color);
+  color: var(--on-accent);
 }
 
 .btn-primary:hover,
 .php-email-form button[type="submit"]:hover {
   background-color: #5eead4;
   border-color: #5eead4;
-  color: var(--contrast-color);
+  color: var(--on-accent);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(45, 212, 191, 0.35);
 }
@@ -132,7 +134,7 @@ button:focus-visible {
 .php-email-form button[type="submit"]:active {
   background-color: #14b8a6;
   border-color: #14b8a6;
-  color: var(--contrast-color);
+  color: var(--on-accent);
   transform: translateY(0);
   box-shadow: none;
 }
@@ -147,7 +149,7 @@ button:focus-visible {
 .btn-outline:hover,
 .btn-ghost:hover {
   background-color: var(--accent-color);
-  color: var(--contrast-color);
+  color: var(--on-accent);
   transform: translateY(-2px);
 }
 
@@ -155,7 +157,7 @@ button:focus-visible {
 .btn-ghost:active {
   background-color: #14b8a6;
   border-color: #14b8a6;
-  color: var(--contrast-color);
+  color: var(--on-accent);
   transform: translateY(0);
 }
 
@@ -257,7 +259,7 @@ button:focus-visible {
 }
 
 .scroll-top i {
-  color: var(--contrast-color);
+  color: var(--on-accent);
   font-size: 30px;
 }
 
@@ -291,7 +293,6 @@ button:focus-visible {
 .services-extra h3 {
   margin-bottom: 1rem;
 }
-
 
 .services-extra ul {
   list-style: none;
@@ -331,7 +332,7 @@ button:focus-visible {
   text-align: center;
   border-radius: 50%;
   background: var(--accent-color);
-  color: var(--contrast-color);
+  color: var(--on-accent);
   font-weight: 700;
 }
 
@@ -352,7 +353,7 @@ button:focus-visible {
 
 .services-extra thead th {
   background: var(--accent-color);
-  color: var(--contrast-color);
+  color: var(--on-accent);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 700;
@@ -375,11 +376,9 @@ button:focus-visible {
 }
 
 
-
 .skillboard.section {
   padding: 90px 0;
 }
-
 
 .skillboard-layout {
   display: grid;
@@ -460,7 +459,6 @@ button:focus-visible {
   border-radius: 999px;
 }
 
-
 .xp-stats {
   list-style: none;
   margin: 0;
@@ -478,7 +476,6 @@ button:focus-visible {
 .xp-stats li:last-child { border-bottom: 0; }
 .xp-stats i { color: var(--accent-color); margin-right: 6px; }
 .xp-stats strong { color: var(--heading-color); font-size: 1.05rem; }
-
 
 .kanban-board {
   display: grid;
@@ -516,7 +513,6 @@ button:focus-visible {
 .kanban-learn .kanban-title i { color: #7dd3fc; }
 .kanban-done  .kanban-title { border-color: #4ade80; }
 .kanban-done  .kanban-title i { color: #4ade80; }
-
 
 .skill-card {
   display: flex;
@@ -569,7 +565,6 @@ button:focus-visible {
 .kanban-learn .skill-status { background: rgba(56, 189, 248, 0.2);  color: #bae6fd; }
 .kanban-done  .skill-status { background: rgba(74, 222, 128, 0.2);  color: #bbf7d0; }
 
-
 @media (max-width: 992px) {
   .skillboard-layout { grid-template-columns: 1fr; }
   .xp-info { flex-direction: row; flex-wrap: wrap; }
@@ -579,7 +574,6 @@ button:focus-visible {
   .kanban-board { grid-template-columns: 1fr; }
   .skillboard.section { padding: 60px 0; }
 }
-
 
 body.services-page .services.section {
   background: linear-gradient(120deg, #0f172a, #134e4a, #1e1b4b, #0f172a);
@@ -643,7 +637,6 @@ body.services-page .services.section {
   border-bottom: 52px solid #a78bfa;
   animation: shape-float 6s ease-in-out infinite;
 }
-
 @keyframes shape-pulse {
   0%, 100% { transform: scale(1); }
   50%      { transform: scale(1.4); }
@@ -656,3 +649,225 @@ body.services-page .services.section {
   50%      { transform: translateY(-28px); }
 }
 
+.cv-form { margin-top: 8px; }
+
+.cv-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 20px;
+}
+.form-field-full { grid-column: 1 / -1; }
+
+.cv-form label,
+.cv-form legend {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+.cv-form legend { float: none; width: 100%; padding: 0; }
+.cv-form legend small { font-weight: 400; color: #94a3b8; }
+
+.cv-form input[type="text"],
+.cv-form input[type="email"],
+.cv-form input[type="tel"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #0f172a;
+  color: var(--heading-color);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.cv-form input::placeholder { color: #64748b; }
+.cv-form input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.3);
+}
+.cv-form input.is-invalid {
+  border-color: #f87171;
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.2);
+}
+
+.field-error {
+  min-height: 1.2em;
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #fca5a5;
+}
+
+.rating-group {
+  margin: 22px 0 0;
+  padding: 0;
+  border: 0;
+}
+.rating-group.is-invalid .rating-option span { border-color: #f87171; }
+.rating-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.rating-option { margin: 0; cursor: pointer; }
+.rating-option input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.rating-option span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: #0f172a;
+  color: #e2e8f0;
+  font-weight: 600;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+.rating-option:hover span { border-color: var(--accent-color); transform: translateY(-2px); }
+.rating-option input:checked + span {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--on-accent);
+}
+.rating-option input:focus-visible + span { outline: 3px solid #fbbf24; outline-offset: 2px; }
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+.cv-form .btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.form-result {
+  margin-top: 28px;
+  padding: 18px 22px;
+  background-color: #0f172a;
+  border: 1px solid rgba(45, 212, 191, 0.5);
+  border-left: 5px solid var(--accent-color);
+  border-radius: 12px;
+  font-style: italic;
+  line-height: 1.8;
+  color: #e2e8f0;
+}
+.form-result[hidden] { display: none; }
+.form-result-average {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(148, 163, 184, 0.4);
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+@media (max-width: 576px) {
+  .cv-form-grid { grid-template-columns: 1fr; }
+  .rating-option span { width: 36px; height: 36px; }
+}
+
+.contact .info-box,
+.contact .contact-form {
+  background-color: var(--surface-color);
+  border: var(--cv-border);
+  border-radius: 20px;
+  box-shadow: var(--cv-shadow);
+}
+.contact .info-box h3,
+.contact .info-box h4,
+.contact .contact-form h3 {
+  color: var(--heading-color);
+}
+.contact .info-box h3,
+.contact .contact-form h3 {
+  color: var(--accent-color);
+}
+.contact .info-box p {
+  color: #cbd5e1;
+}
+.contact .info-box .icon-box {
+  background-color: rgba(45, 212, 191, 0.15);
+  border: 1px solid rgba(45, 212, 191, 0.5);
+  color: var(--accent-color);
+  border-radius: 50%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.contact .info-box .icon-box i {
+  color: var(--accent-color);
+  font-size: 1.4rem;
+  transition: color 0.2s ease;
+}
+.contact .info-box .info-item:hover .icon-box,
+.contact .info-box .icon-box:hover {
+  background-color: var(--accent-color);
+}
+.contact .info-box .info-item:hover .icon-box i,
+.contact .info-box .icon-box:hover i {
+  color: var(--on-accent);
+}
+
+.hero .hero-actions .btn.btn-primary,
+.hero .hero-actions .btn.btn-primary:hover,
+.hero .social-links a:hover,
+.about .intro-content .cta-group .btn-ghost:hover,
+.about .intro-content .cta-group .btn-ghost:focus,
+.services .service-item:hover .service-icon,
+.portfolio .portfolio-filters li.filter-active,
+.portfolio .portfolio-card .portfolio-img .portfolio-overlay a,
+.portfolio .btn-primary,
+.scroll-top:hover {
+  color: var(--on-accent);
+}
+
+@media (max-width: 1199px) {
+  .navmenu a i:hover,
+  .navmenu a:focus i:hover,
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    color: var(--on-accent);
+  }
+}
+
+.contact .contact-form .cv-form .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 12px 30px;
+  border-radius: 999px;
+  border: 2px solid var(--accent-color);
+  font-weight: 600;
+}
+.contact .contact-form .cv-form .btn-primary {
+  background-color: var(--accent-color);
+  color: var(--on-accent);
+}
+.contact .contact-form .cv-form .btn-primary:hover:not(:disabled) {
+  background-color: #5eead4;
+  border-color: #5eead4;
+  color: var(--on-accent);
+}
+.contact .contact-form .cv-form .btn-primary:active:not(:disabled) {
+  background-color: #14b8a6;
+  border-color: #14b8a6;
+}
+.contact .contact-form .cv-form .btn-outline {
+  background-color: transparent;
+  color: var(--accent-color);
+}
+.contact .contact-form .cv-form .btn-outline:hover {
+  background-color: var(--accent-color);
+  color: var(--on-accent);
+}
+
+.contact .contact-form .cv-form .field-error {
+  margin: 4px 0 0;
+  color: #fca5a5;
+}

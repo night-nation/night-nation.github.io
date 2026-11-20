@@ -78,7 +78,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
+        <h2>Kontaktai</h2>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -86,17 +86,17 @@
         <div class="row g-4 g-lg-5">
           <div class="col-lg-5">
             <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-              <h3>Contact Info</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <h3>Kontaktinė informacija</h3>
+              <p>Turite klausimų ar idėjų projektui? Parašykite man arba susisiekite žemiau nurodytais kontaktais.</p>
 
               <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
                 </div>
                 <div class="content">
-                  <h4>Our Location</h4>
-                  <p>A108 Adam Street</p>
-                  <p>New York, NY 535022</p>
+                  <h4>Vieta</h4>
+                  <p>Vilnius TECH</p>
+                  <p>Vilnius, Lietuva</p>
                 </div>
               </div>
 
@@ -105,9 +105,8 @@
                   <i class="bi bi-telephone"></i>
                 </div>
                 <div class="content">
-                  <h4>Phone Number</h4>
-                  <p>+1 5589 55488 55</p>
-                  <p>+1 6678 254445 41</p>
+                  <h4>Telefonas</h4>
+                  <p>+370 6xx xxxxx</p>
                 </div>
               </div>
 
@@ -116,9 +115,8 @@
                   <i class="bi bi-envelope"></i>
                 </div>
                 <div class="content">
-                  <h4>Email Address</h4>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
+                  <h4>El. paštas</h4>
+                  <p>vardas.pavarde@example.lt</p>
                 </div>
               </div>
             </div>
@@ -126,38 +124,63 @@
 
           <div class="col-lg-7">
             <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-              <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <h3>Parašykite man</h3>
+              <p>Užpildykite visus laukus. Mygtukas „Siųsti“ taps aktyvus, kai forma bus užpildyta.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gy-4">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              <form id="contact-form" class="cv-form" novalidate>
+                <div class="cv-form-grid">
+                  <div class="form-field">
+                    <label for="vardas">Vardas</label>
+                    <input type="text" id="vardas" name="vardas" autocomplete="given-name" required >
+                    <p class="field-error" data-error-for="vardas" aria-live="polite"></p>
                   </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <div class="form-field">
+                    <label for="pavarde">Pavardė</label>
+                    <input type="text" id="pavarde" name="pavarde" autocomplete="family-name" required >
+                    <p class="field-error" data-error-for="pavarde" aria-live="polite"></p>
                   </div>
-
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <div class="form-field">
+                    <label for="email">El. paštas</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required >
+                    <p class="field-error" data-error-for="email" aria-live="polite"></p>
                   </div>
-
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <div class="form-field">
+                    <label for="telefonas">Telefono numeris</label>
+                    <input type="tel" id="telefonas" name="telefonas" autocomplete="tel" required inputmode="numeric" placeholder="+370 6xx xxxxx">
+                    <p class="field-error" data-error-for="telefonas" aria-live="polite"></p>
                   </div>
-
-                  <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit" class="btn">Send Message</button>
+                  <div class="form-field form-field-full">
+                    <label for="adresas">Adresas</label>
+                    <input type="text" id="adresas" name="adresas" autocomplete="street-address" required>
+                    <p class="field-error" data-error-for="adresas" aria-live="polite"></p>
                   </div>
+                </div>
 
+                  <fieldset class="rating-group">
+                    <legend>1. Kaip vertinate svetainės dizainą? <small>(1 – blogai, 10 – puiku)</small></legend>
+                    <div class="rating-options"><label class="rating-option"><input type="radio" name="q1" value="1" required><span>1</span></label><label class="rating-option"><input type="radio" name="q1" value="2" required><span>2</span></label><label class="rating-option"><input type="radio" name="q1" value="3" required><span>3</span></label><label class="rating-option"><input type="radio" name="q1" value="4" required><span>4</span></label><label class="rating-option"><input type="radio" name="q1" value="5" required><span>5</span></label><label class="rating-option"><input type="radio" name="q1" value="6" required><span>6</span></label><label class="rating-option"><input type="radio" name="q1" value="7" required><span>7</span></label><label class="rating-option"><input type="radio" name="q1" value="8" required><span>8</span></label><label class="rating-option"><input type="radio" name="q1" value="9" required><span>9</span></label><label class="rating-option"><input type="radio" name="q1" value="10" required><span>10</span></label></div>
+                    <p class="field-error" data-error-for="q1" aria-live="polite"></p>
+                  </fieldset>
+
+                  <fieldset class="rating-group">
+                    <legend>2. Kaip vertinate turinio aiškumą? <small>(1 – blogai, 10 – puiku)</small></legend>
+                    <div class="rating-options"><label class="rating-option"><input type="radio" name="q2" value="1" required><span>1</span></label><label class="rating-option"><input type="radio" name="q2" value="2" required><span>2</span></label><label class="rating-option"><input type="radio" name="q2" value="3" required><span>3</span></label><label class="rating-option"><input type="radio" name="q2" value="4" required><span>4</span></label><label class="rating-option"><input type="radio" name="q2" value="5" required><span>5</span></label><label class="rating-option"><input type="radio" name="q2" value="6" required><span>6</span></label><label class="rating-option"><input type="radio" name="q2" value="7" required><span>7</span></label><label class="rating-option"><input type="radio" name="q2" value="8" required><span>8</span></label><label class="rating-option"><input type="radio" name="q2" value="9" required><span>9</span></label><label class="rating-option"><input type="radio" name="q2" value="10" required><span>10</span></label></div>
+                    <p class="field-error" data-error-for="q2" aria-live="polite"></p>
+                  </fieldset>
+
+                  <fieldset class="rating-group">
+                    <legend>3. Kaip vertinate naršymo patogumą? <small>(1 – blogai, 10 – puiku)</small></legend>
+                    <div class="rating-options"><label class="rating-option"><input type="radio" name="q3" value="1" required><span>1</span></label><label class="rating-option"><input type="radio" name="q3" value="2" required><span>2</span></label><label class="rating-option"><input type="radio" name="q3" value="3" required><span>3</span></label><label class="rating-option"><input type="radio" name="q3" value="4" required><span>4</span></label><label class="rating-option"><input type="radio" name="q3" value="5" required><span>5</span></label><label class="rating-option"><input type="radio" name="q3" value="6" required><span>6</span></label><label class="rating-option"><input type="radio" name="q3" value="7" required><span>7</span></label><label class="rating-option"><input type="radio" name="q3" value="8" required><span>8</span></label><label class="rating-option"><input type="radio" name="q3" value="9" required><span>9</span></label><label class="rating-option"><input type="radio" name="q3" value="10" required><span>10</span></label></div>
+                    <p class="field-error" data-error-for="q3" aria-live="polite"></p>
+                  </fieldset>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary" id="submit-btn" disabled>Siųsti</button>
+                  <button type="button" class="btn btn-outline" id="clear-btn">Išvalyti</button>
                 </div>
               </form>
+
+              <div id="form-result" class="form-result" aria-live="polite" hidden></div>
 
             </div>
           </div>
@@ -213,6 +236,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
