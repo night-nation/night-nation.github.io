@@ -78,127 +78,49 @@
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Kompetencijų pažanga</h2>
-        <p>Mano įgūdžių kelias: ką planuoju, ką mokausi ir ką jau išmokau</p>
+        <p>Mano įgūdžių kelias: ką planuoju, ką mokausi ir ką jau išmokau. Pakeitus įgūdžio būseną, viskas atsinaujina automatiškai.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="skillboard-layout">
 
-          <!-- XP, lygis, rangas, progresas, statistika -->
+          <!-- XP, lygis, rangas, progresas, statistika (užpildoma per JavaScript) -->
           <aside class="xp-panel" aria-label="Patirties informacija">
             <div class="xp-info">
-              <div class="xp-box xp-total"><i class="bi bi-star" aria-hidden="true"></i><div><span>Bendras XP:</span><strong>180 XP</strong></div></div>
-              <div class="xp-box xp-level"><i class="bi bi-bar-chart" aria-hidden="true"></i><div><span>Lygis:</span><strong>3</strong></div></div>
-              <div class="xp-box xp-rank"><i class="bi bi-trophy" aria-hidden="true"></i><div><span>Rangas:</span><strong>Specialistas</strong></div></div>
+              <div class="xp-box xp-total"><i class="bi bi-star" aria-hidden="true"></i><div><span>Bendras XP:</span><strong id="xp-total">0 XP</strong></div></div>
+              <div class="xp-box xp-level"><i class="bi bi-bar-chart" aria-hidden="true"></i><div><span>Lygis:</span><strong id="xp-level">1</strong></div></div>
+              <div class="xp-box xp-rank"><i class="bi bi-trophy" aria-hidden="true"></i><div><span>Rangas:</span><strong id="xp-rank">Pradedantysis</strong></div></div>
             </div>
 
             <div class="xp-progress">
-              <p class="xp-progress-label">Progresas iki kito lygio</p>
-              <div class="xp-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Progresas iki kito lygio">
-                <div class="xp-bar-fill" style="width:60%">60%</div>
+              <p class="xp-progress-label">Progresas iki kito lygio: <strong id="xp-percent">0%</strong></p>
+              <div class="xp-bar" id="xp-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progresas iki kito lygio">
+                <div class="xp-bar-fill" id="xp-bar-fill"></div>
               </div>
+              <p class="xp-progress-note" id="xp-note"></p>
             </div>
 
             <ul class="xp-stats">
-              <li><span><i class="bi bi-code-slash" aria-hidden="true"></i> Įgūdžiai:</span><strong>8</strong></li>
-              <li><span><i class="bi bi-check-circle" aria-hidden="true"></i> Atlikta:</span><strong>4</strong></li>
-              <li><span><i class="bi bi-pie-chart" aria-hidden="true"></i> Procentas:</span><strong>50%</strong></li>
+              <li><span><i class="bi bi-code-slash" aria-hidden="true"></i> Įgūdžiai:</span><strong id="stat-total">0</strong></li>
+              <li><span><i class="bi bi-check-circle" aria-hidden="true"></i> Atlikta:</span><strong id="stat-done">0</strong></li>
+              <li><span><i class="bi bi-pie-chart" aria-hidden="true"></i> Procentas:</span><strong id="stat-percent">0%</strong></li>
             </ul>
           </aside>
 
-          <!-- Kanban lenta -->
-          <div class="kanban-board">
-          <section class="kanban-column kanban-plan" aria-label="Planuojama">
-            <h3 class="kanban-title"><i class="bi bi-calendar3" aria-hidden="true"></i> Planuojama</h3>
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true"><i class="bi bi-motherboard"></i></span>
-              <div class="skill-info">
-                <h4>PCB projektavimas (KiCad)</h4>
-                <div class="skill-meta">
-                  <span class="skill-status">Būsena: Planuojama</span>
-                  <span class="skill-xp">XP: 40</span>
-                </div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true"><i class="bi bi-cpu"></i></span>
-              <div class="skill-info">
-                <h4>FreeRTOS</h4>
-                <div class="skill-meta">
-                  <span class="skill-status">Būsena: Planuojama</span>
-                  <span class="skill-xp">XP: 50</span>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <section class="kanban-column kanban-learn" aria-label="Mokomasi">
-            <h3 class="kanban-title"><i class="bi bi-book" aria-hidden="true"></i> Mokomasi</h3>
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true"><i class="bi bi-graph-up"></i></span>
-              <div class="skill-info">
-                <h4>MATLAB</h4>
-                <div class="skill-meta">
-                  <span class="skill-status">Būsena: Mokomasi</span>
-                  <span class="skill-xp">XP: 40</span>
-                </div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true"><i class="bi bi-database"></i></span>
-              <div class="skill-info">
-                <h4>SQL duomenų bazės</h4>
-                <div class="skill-meta">
-                  <span class="skill-status">Būsena: Mokomasi</span>
-                  <span class="skill-xp">XP: 30</span>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <section class="kanban-column kanban-done" aria-label="Atlikta">
-            <h3 class="kanban-title"><i class="bi bi-check-circle" aria-hidden="true"></i> Atlikta</h3>
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true"><i class="bi bi-code-slash"></i></span>
-              <div class="skill-info">
-                <h4>C / C++ (ESP32)</h4>
-                <div class="skill-meta">
-                  <span class="skill-status">Būsena: Atlikta</span>
-                  <span class="skill-xp">XP: 80</span>
-                </div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true"><i class="bi bi-hdd-network"></i></span>
-              <div class="skill-info">
-                <h4>Linux ir Proxmox</h4>
-                <div class="skill-meta">
-                  <span class="skill-status">Būsena: Atlikta</span>
-                  <span class="skill-xp">XP: 40</span>
-                </div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true"><i class="bi bi-filetype-html"></i></span>
-              <div class="skill-info">
-                <h4>HTML ir CSS</h4>
-                <div class="skill-meta">
-                  <span class="skill-status">Būsena: Atlikta</span>
-                  <span class="skill-xp">XP: 30</span>
-                </div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true"><i class="bi bi-github"></i></span>
-              <div class="skill-info">
-                <h4>Git ir GitHub</h4>
-                <div class="skill-meta">
-                  <span class="skill-status">Būsena: Atlikta</span>
-                  <span class="skill-xp">XP: 30</span>
-                </div>
-              </div>
-            </article>
-          </section>
+          <!-- Kanban lenta: kortelės generuojamos per JavaScript -->
+          <div class="kanban-board" id="kanban-board">
+            <section class="kanban-column kanban-plan" data-status="Planuojama" aria-label="Planuojama">
+              <h3 class="kanban-title"><i class="bi bi-calendar3" aria-hidden="true"></i> Planuojama</h3>
+              <div class="kanban-list"></div>
+            </section>
+            <section class="kanban-column kanban-learn" data-status="Mokomasi" aria-label="Mokomasi">
+              <h3 class="kanban-title"><i class="bi bi-book" aria-hidden="true"></i> Mokomasi</h3>
+              <div class="kanban-list"></div>
+            </section>
+            <section class="kanban-column kanban-done" data-status="Atlikta" aria-label="Atlikta">
+              <h3 class="kanban-title"><i class="bi bi-check-circle" aria-hidden="true"></i> Atlikta</h3>
+              <div class="kanban-list"></div>
+            </section>
           </div>
 
         </div>
@@ -251,6 +173,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

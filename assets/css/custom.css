@@ -574,7 +574,6 @@ button:focus-visible {
   .kanban-board { grid-template-columns: 1fr; }
   .skillboard.section { padding: 60px 0; }
 }
-
 body.services-page .services.section {
   background: linear-gradient(120deg, #0f172a, #134e4a, #1e1b4b, #0f172a);
   background-size: 300% 300%;
@@ -649,6 +648,14 @@ body.services-page .services.section {
   50%      { transform: translateY(-28px); }
 }
 
+
+@media (prefers-reduced-motion: reduce) {
+  body.services-page .services.section,
+  .shape {
+    animation: none;
+  }
+}
+
 .cv-form { margin-top: 8px; }
 
 .cv-form-grid {
@@ -700,7 +707,6 @@ body.services-page .services.section {
   line-height: 1.4;
   color: #fca5a5;
 }
-
 .rating-group {
   margin: 22px 0 0;
   padding: 0;
@@ -871,3 +877,55 @@ body.services-page .services.section {
   margin: 4px 0 0;
   color: #fca5a5;
 }
+.kanban-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-select {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 8px;
+  padding: 6px 8px;
+  background-color: #1e293b;
+  color: var(--heading-color);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.skill-select:hover { border-color: var(--accent-color); }
+.skill-select:focus-visible {
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+.kanban-empty {
+  margin: 0;
+  padding: 18px 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  border: 1px dashed rgba(148, 163, 184, 0.35);
+  border-radius: 12px;
+}
+
+.xp-bar-fill {
+  transition: width 0.4s ease;
+  min-width: 0;
+}
+.xp-progress-label strong { color: var(--accent-color); }
+.xp-progress-note {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #94a3b8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xp-bar-fill { transition: none; }
+}
+
+.skill-info { flex: 1 1 auto; }
